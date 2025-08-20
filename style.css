@@ -1,0 +1,99 @@
+:root{
+    --background-color: #7fffd4;
+    --frame-color: black;
+    --screen-color: beige;
+    --button-color: rgb(102, 102, 102);
+    --button-text-color: aliceblue;
+    --button-hover-bg-color: white;
+    --button-hover-text-color: black;
+    --equals-button-bg-color: orange;
+    --equals-button-text-color: white;
+    --equals-button-hover-bg-color: aliceblue;
+    --equals-button-hover-text-color: orange;
+}
+
+body{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    background-color: var(--background-color);
+    height: 100vh;
+    width: 100%;
+}
+
+.fram {
+    background-color: var(--frame-color);
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+.calculator-screen {
+    height: 60px;
+    width: 95%;
+    border-radius: 30px;
+    color: var(--frame-color);
+    font-size: 2rem;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: var(--screen-color);
+}
+
+.elements {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.align-by-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    width: calc(25% - 10px);
+    height: 60px;
+    margin: 5px 0;
+    border-radius: 50%;
+    background-color: var(--button-color);
+    color: var(--button-text-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background-color: var(--button-hover-bg-color);
+    color: var(--button-hover-text-color);
+}
+
+.equals {
+    background-color: var(--equals-button-bg-color);
+    color: var(--equals-button-text-color);
+}
+
+.equals:hover {
+    background-color: var(--equals-button-hover-bg-color);
+    color: var(--equals-button-hover-text-color);
+}
+
+@media (max-width: 500px) {
+    button {
+        width: calc(25% - 5px);
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .calculator-screen {
+        font-size: 1.5rem;
+    }
+}
+
